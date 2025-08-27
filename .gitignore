@@ -1,0 +1,6 @@
+.git/
+.idea/
+.venv/
+dist/gui.exe
+
+main.py
