@@ -17,11 +17,11 @@ def ensure_pyinstaller():
         import PyInstaller  # noqa
     except ImportError:
         print("[INFO] PyInstaller not installed. Installing...")
-        run_command(f"{sys.executable} -m pip install pyinstaller")
+        run_command(f'"{sys.executable}" -m pip install pyinstaller')
 
 def build_exe():
     print(f"[INFO] Copying {SCRIPT_NAME} to .exe...")
-    run_command(f'{sys.executable} -m PyInstaller --onefile --windowed {SCRIPT_NAME}')
+    run_command(f'"{sys.executable}" -m PyInstaller --onefile --windowed {SCRIPT_NAME}')
 
 def cleanup():
     print("[INFO] Removing temporary files...")
