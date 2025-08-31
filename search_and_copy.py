@@ -104,9 +104,11 @@ def copy_files_from_lookup(lookup_file):
 
 
 if __name__ == "__main__":
-    # 🔧 KONFIGURACJA
+    # KONFIGURACJA
     src = "H:/"   # katalog źródłowy
-    dst = "G:/backup/HP"          # katalog docelowy
+    folder_name = str(input("Podaj nazwe katalogu docelowego: "))
+    dst = os.path.normpath("G:/backup")          # katalog docelowy
+    os.mkdir(os.path.join(dst, folder_name))
     lookup_file = "lookup.json" # plik JSON do zapisu/odczytu
 
     extensions = [
